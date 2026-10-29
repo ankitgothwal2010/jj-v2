@@ -1,0 +1,15 @@
+<!--
+    Copyright ©️ 2026 Ankit Gothwal.
+    All rights reserved, subject to applicable third-party license terms.
+
+    Project: JARVIS AI
+    Developer: Ankit Gothwal
+-->
+<accessibility-service xmlns:android="http://schemas.android.com/apk/res/android"
+    android:accessibilityEventTypes="typeWindowStateChanged"
+    android:accessibilityFeedbackType="feedbackGeneric"
+    android:accessibilityFlags="flagDefault"
+    android:canPerformGestures="false"
+    android:canRetrieveWindowContent="false"
+    android:description="@string/accessibility_service_description"
+    android:notificationTimeout="100" />

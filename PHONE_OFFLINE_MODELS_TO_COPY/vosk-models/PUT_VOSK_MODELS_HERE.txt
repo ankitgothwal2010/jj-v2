@@ -1,0 +1,1 @@
+Extract vosk-model-small-en-in and vosk-model-small-hi folders here, then run Option [3] in ONE_CLICK_SETUP_AND_BUILD_PENTIUM_G645.bat to push them to your Infinix Hot 10.

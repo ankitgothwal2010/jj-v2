@@ -1,0 +1,1 @@
+Place qwen2.5-0.5b-instruct-q4_k_m.gguf here, then run Option [3] in ONE_CLICK_SETUP_AND_BUILD_PENTIUM_G645.bat to push it to your Infinix Hot 10.

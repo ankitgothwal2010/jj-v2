@@ -1,0 +1,36 @@
+<!--
+    Copyright ©️ 2026 Ankit Gothwal.
+    All rights reserved, subject to applicable third-party license terms.
+
+    Project: JARVIS AI
+    Developer: Ankit Gothwal
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Deep Navy Background Circle -->
+    <path
+        android:fillColor="#050811"
+        android:pathData="M54,54m-50,0a50,50 0,1 1,100 0a50,50 0,1 1,-100 0" />
+    <!-- Outer Cobalt Blue Ring -->
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#0077FF"
+        android:strokeWidth="3.5"
+        android:pathData="M54,54m-42,0a42,42 0,1 1,84 0a42,42 0,1 1,-84 0" />
+    <!-- Segmented Electric Cyan HUD Ring -->
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#00E5FF"
+        android:strokeWidth="4"
+        android:pathData="M54,20 A34,34 0 0,1 88,54 M54,88 A34,34 0 0,1 20,54" />
+    <!-- Inner Geometric Core -->
+    <path
+        android:fillColor="#00E5FF"
+        android:pathData="M54,38 L68,54 L54,70 L40,54 Z" />
+    <path
+        android:fillColor="#050811"
+        android:pathData="M54,45 L61,54 L54,63 L47,54 Z" />
+</vector>

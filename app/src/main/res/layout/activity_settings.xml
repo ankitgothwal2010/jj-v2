@@ -1,0 +1,266 @@
+<!--
+    Copyright ©️ 2026 Ankit Gothwal.
+    All rights reserved, subject to applicable third-party license terms.
+
+    Project: JARVIS AI
+    Developer: Ankit Gothwal
+-->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/jarvis_bg_black"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnBackFromSettings"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="← BACK TO HUD"
+            android:textColor="@color/jarvis_cyan"
+            app:strokeColor="@color/jarvis_cyan" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:fontFamily="monospace"
+            android:text="@string/title_settings"
+            android:textColor="@color/jarvis_cyan"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <!-- Full Phone Control Authorization Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/bg_hud_panel"
+            android:orientation="vertical"
+            android:padding="14dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:text="1. FULL PHONE CONTROL AUTHORIZATION"
+                android:textColor="@color/jarvis_cyan"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnGrantPhoneControlPerms"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/jarvis_cyan"
+                android:text="1. Grant All Phone Permissions (Call, SMS, Contacts, Mic)"
+                android:textColor="@color/jarvis_bg_black"
+                android:textStyle="bold" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnEnableScreenLockControl"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="2. Enable Screen Lock &amp; Accessibility Control"
+                android:textColor="@color/jarvis_cyan"
+                app:strokeColor="@color/jarvis_cyan" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnEnableBrightnessAndDnd"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="3. Enable Brightness, Auto-Rotate &amp; Silent/DND Control"
+                android:textColor="@color/jarvis_blue_light"
+                app:strokeColor="@color/jarvis_blue" />
+        </LinearLayout>
+
+        <!-- Voice & Language Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/bg_hud_panel"
+            android:orientation="vertical"
+            android:padding="14dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:text="2. VOICE RECOGNITION &amp; SPOKEN LANGUAGE"
+                android:textColor="@color/jarvis_blue_light"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:id="@+id/rgLanguage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+
+                <RadioButton
+                    android:id="@+id/rbLangEnglish"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="English (India / Global — en-IN)"
+                    android:textColor="@color/jarvis_text_primary" />
+
+                <RadioButton
+                    android:id="@+id/rbLangHindi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hindi &amp; Hinglish (भारत — hi-IN)"
+                    android:textColor="@color/jarvis_text_primary" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/tvSpeechRateValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Speech Rate: 1.00x"
+                android:textColor="@color/jarvis_text_primary" />
+
+            <SeekBar
+                android:id="@+id/seekSpeechRate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnInstallOfflineTts"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Verify / Install Offline Android TTS Voice Data"
+                android:textColor="@color/jarvis_cyan"
+                app:strokeColor="@color/jarvis_cyan" />
+        </LinearLayout>
+
+        <!-- Accessible HUD Theme Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/bg_hud_panel"
+            android:orientation="vertical"
+            android:padding="14dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:text="3. HUD VISUAL THEME &amp; ACCESSIBILITY"
+                android:textColor="@color/jarvis_blue_light"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:id="@+id/rgThemeAccent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+
+                <RadioButton
+                    android:id="@+id/rbThemeCyan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Electric Cyan &amp; Navy HUD (Default)"
+                    android:textColor="@color/jarvis_text_primary" />
+
+                <RadioButton
+                    android:id="@+id/rbThemeBlue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Deep Cobalt Sky HUD"
+                    android:textColor="@color/jarvis_text_primary" />
+
+                <RadioButton
+                    android:id="@+id/rbThemeHighContrast"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="High-Contrast Accessible HUD (WCAG AAA)"
+                    android:textColor="@color/jarvis_text_primary" />
+            </RadioGroup>
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/switchFooterCredit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="Show subtle creator credit in HUD footer"
+                android:textColor="@color/jarvis_text_primary" />
+        </LinearLayout>
+
+        <!-- Local Model Storage & Memory Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/bg_hud_panel"
+            android:orientation="vertical"
+            android:padding="14dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:text="4. VOSK &amp; SYSTEM CONTROL DIAGNOSTICS"
+                android:textColor="@color/jarvis_blue_light"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvModelDirectoriesInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="monospace"
+                android:lineSpacingExtra="3dp"
+                android:textColor="@color/jarvis_text_secondary"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <!-- Privacy & Local Memory Wipe -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/bg_hud_panel"
+            android:orientation="vertical"
+            android:padding="14dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:text="5. LOCAL MEMORY &amp; PRIVACY CONTROLS"
+                android:textColor="@color/jarvis_blue_light"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnClearHistory"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Delete All Local Conversations &amp; Notes"
+                android:textColor="@color/jarvis_danger"
+                app:strokeColor="@color/jarvis_danger" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,48 @@
+<!--
+    Copyright ©️ 2026 Ankit Gothwal.
+    All rights reserved, subject to applicable third-party license terms.
+
+    Project: JARVIS AI
+    Developer: Ankit Gothwal
+-->
+<resources>
+    <string name="app_name">JARVIS — Personal AI Assistant</string>
+    <string name="hud_header_title">J.A.R.V.I.S. PERSONAL AI</string>
+    <string name="hud_header_subtitle">OFFLINE-FIRST HUD • ANKIT GOTHWAL</string>
+
+    <string name="title_settings">HUD Preferences &amp; Phone Control</string>
+    <string name="title_about">About JARVIS AI</string>
+
+    <string name="status_tap_mic_or_type">TAP MICROPHONE TO SPEAK OR TYPE COMMAND BELOW</string>
+    <string name="status_generating_local_reply">PROCESSING LOCALLY ON DEVICE...</string>
+
+    <string name="btn_tap_to_speak">MIC: SPEAK</string>
+    <string name="btn_listening_active">LISTENING... (TAP TO STOP)</string>
+    <string name="btn_stop_speaking">STOP VOICE</string>
+    <string name="btn_mute_voice">MUTE TTS</string>
+    <string name="btn_unmute_voice">UNMUTE TTS</string>
+    <string name="btn_send">SEND</string>
+    <string name="hint_type_command">Say/type: Call +91..., Lock phone, Turn Wi-Fi on...</string>
+
+    <string name="creator_footer_text">JARVIS AI • Created &amp; developed by Ankit Gothwal</string>
+
+    <!-- Permission & Service Descriptions -->
+    <string name="perm_mic_title">Microphone Access for Offline Voice</string>
+    <string name="perm_mic_rationale">JARVIS uses your microphone only when you tap the Speak button so your voice commands can be processed locally on your phone. No audio is recorded in the background or sent to external servers.</string>
+    <string name="perm_mic_denied_title">Microphone Permission Disabled</string>
+    <string name="perm_mic_settings_guide">Microphone permission is currently turned off. You can enable it in Android App Settings to use voice commands, or continue typing commands manually.</string>
+    <string name="btn_grant">Grant Access</string>
+    <string name="btn_use_text_only">Use Text Input</string>
+    <string name="btn_open_settings">Open App Settings</string>
+    <string name="accessibility_service_description">Allows JARVIS AI (by Ankit Gothwal) to lock your phone screen, take screenshots, and open notifications when you command it. Never reads screen content or passwords.</string>
+    <string name="device_admin_description">Allows JARVIS AI (by Ankit Gothwal) to lock your phone screen immediately when you say "Lock my phone".</string>
+
+    <!-- Official About Screen Text (Exact Requirement) -->
+    <string name="about_heading">JARVIS AI</string>
+    <string name="about_creator">Created and developed by Ankit Gothwal</string>
+    <string name="about_copyright">Copyright ©️ 2026 Ankit Gothwal</string>
+    <string name="about_rights">All rights reserved, subject to applicable third-party licenses.</string>
+    <string name="about_version">Version 1.0.0</string>
+    <string name="about_description">An independent personal AI assistant project.</string>
+    <string name="about_disclaimer">Non-Affiliation Notice: This application is an independent software project created by Ankit Gothwal. It is not affiliated with, endorsed by, or connected to OpenAI, Marvel, Iron Man, Disney, or any other company or franchise. All third-party open-source components remain governed by their respective licenses as documented in THIRD_PARTY_NOTICES.md.</string>
+</resources>

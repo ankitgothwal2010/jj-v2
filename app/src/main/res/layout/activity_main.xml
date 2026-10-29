@@ -1,0 +1,233 @@
+<!--
+    Copyright ©️ 2026 Ankit Gothwal.
+    All rights reserved, subject to applicable third-party license terms.
+
+    Project: JARVIS AI
+    Developer: Ankit Gothwal
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/jarvis_bg_black"
+    android:orientation="vertical"
+    android:padding="12dp">
+
+    <!-- Top Futuristic HUD Header Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_hud_panel"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <ImageView
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_jarvis_logo" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:letterSpacing="0.08"
+                android:text="@string/hud_header_title"
+                android:textColor="@color/jarvis_cyan"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvModelStatusBadge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:text="OFFLINE RULE BRAIN ACTIVE"
+                android:textColor="@color/jarvis_text_secondary"
+                android:textSize="11sp" />
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSettings"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:minWidth="0dp"
+            android:paddingHorizontal="10dp"
+            android:text="CFG"
+            android:textColor="@color/jarvis_cyan"
+            android:textSize="11sp"
+            app:strokeColor="@color/jarvis_cyan" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnAbout"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:layout_marginStart="6dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:minWidth="0dp"
+            android:paddingHorizontal="10dp"
+            android:text="INFO"
+            android:textColor="@color/jarvis_blue_light"
+            android:textSize="11sp"
+            app:strokeColor="@color/jarvis_blue" />
+    </LinearLayout>
+
+    <!-- Animated Circular HUD Voice Visualizer Panel -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_hud_panel"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <com.ankit.jarvis.HudVoiceVisualizerView
+            android:id="@+id/hudVisualizer"
+            android:layout_width="136dp"
+            android:layout_height="136dp" />
+
+        <TextView
+            android:id="@+id/tvListeningBanner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:fontFamily="monospace"
+            android:gravity="center"
+            android:text="@string/status_tap_mic_or_type"
+            android:textColor="@color/jarvis_cyan"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvTelemetryDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:gravity="center"
+            android:text="100% On-Device Storage &amp; Execution"
+            android:textColor="@color/jarvis_text_secondary"
+            android:textSize="11sp" />
+
+        <TextView
+            android:id="@+id/tvTtsStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            android:text="VOICE READY"
+            android:textColor="@color/jarvis_blue_light"
+            android:textSize="10sp" />
+    </LinearLayout>
+
+    <!-- Conversation Log RecyclerView -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvConversation"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:paddingBottom="8dp" />
+
+    <!-- Voice & Speech Action Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingVertical="4dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnMic"
+            android:layout_width="0dp"
+            android:layout_height="46dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/jarvis_cyan"
+            android:fontFamily="monospace"
+            android:text="@string/btn_tap_to_speak"
+            android:textColor="@color/jarvis_bg_black"
+            android:textStyle="bold" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnStopSpeaking"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="46dp"
+            android:layout_marginStart="6dp"
+            android:text="@string/btn_stop_speaking"
+            android:textColor="@color/jarvis_danger"
+            android:textSize="11sp"
+            android:visibility="gone"
+            app:strokeColor="@color/jarvis_danger" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnMuteToggle"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="46dp"
+            android:layout_marginStart="6dp"
+            android:text="@string/btn_mute_voice"
+            android:textColor="@color/jarvis_text_primary"
+            android:textSize="11sp"
+            app:strokeColor="@color/jarvis_border_dim" />
+    </LinearLayout>
+
+    <!-- Manual Text Input Alternative Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_hud_panel"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="4dp">
+
+        <EditText
+            android:id="@+id/etCommandInput"
+            android:layout_width="0dp"
+            android:layout_height="42dp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:hint="@string/hint_type_command"
+            android:imeOptions="actionSend"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:textColor="@color/jarvis_text_primary"
+            android:textColorHint="@color/jarvis_text_secondary"
+            android:textSize="14sp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSendText"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:backgroundTint="@color/jarvis_blue"
+            android:text="@string/btn_send"
+            android:textColor="@color/jarvis_text_primary"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <!-- Subtle Optional Creator Credit Footer -->
+    <TextView
+        android:id="@+id/tvCreatorFooter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:gravity="center"
+        android:text="@string/creator_footer_text"
+        android:textColor="@color/jarvis_text_secondary"
+        android:textSize="10sp" />
+
+</LinearLayout>

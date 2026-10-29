@@ -1,0 +1,27 @@
+<!--
+    Copyright ©️ 2026 Ankit Gothwal.
+    All rights reserved, subject to applicable third-party license terms.
+
+    Project: JARVIS AI
+    Developer: Ankit Gothwal
+-->
+<resources>
+    <!-- Core Dark Black & Deep Navy HUD Surfaces -->
+    <color name="jarvis_bg_black">#050811</color>
+    <color name="jarvis_bg_navy">#0A1124</color>
+    <color name="jarvis_surface">#101B35</color>
+    <color name="jarvis_user_bubble">#0D274C</color>
+    <color name="jarvis_ai_bubble">#091931</color>
+
+    <!-- Electric Cyan & Cobalt Blue Accents -->
+    <color name="jarvis_cyan">#00E5FF</color>
+    <color name="jarvis_cyan_dim">#3300E5FF</color>
+    <color name="jarvis_blue">#0077FF</color>
+    <color name="jarvis_blue_light">#5CE1E6</color>
+    <color name="jarvis_border_dim">#263B6A</color>
+
+    <!-- Accessible High-Contrast Text Hierarchy -->
+    <color name="jarvis_text_primary">#F0F6FC</color>
+    <color name="jarvis_text_secondary">#94A3B8</color>
+    <color name="jarvis_danger">#FF4D6D</color>
+</resources>

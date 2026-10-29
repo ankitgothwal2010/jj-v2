@@ -1,0 +1,15 @@
+<!--
+    Copyright ©️ 2026 Ankit Gothwal.
+    All rights reserved, subject to applicable third-party license terms.
+
+    Project: JARVIS AI
+    Developer: Ankit Gothwal
+-->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="@color/jarvis_bg_navy" />
+    <stroke
+        android:width="1dp"
+        android:color="@color/jarvis_border_dim" />
+    <corners android:radius="12dp" />
+</shape>
